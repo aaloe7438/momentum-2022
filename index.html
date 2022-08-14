@@ -9,7 +9,7 @@
     <title>Mometum</title>
   </head>
   <body>
-    <div class="center-box">
+    <div id="center-box">
       <div id="clock"></div>
 
       <form class="hidden greeing-box" id="login-form">
@@ -25,26 +25,33 @@
       </form>
 
       <h2 class="hidden greeing-box" id="greeting"></h2>
+    </div>
 
-      <form id="todo-form">
-        <input
-          required
-          type="text"
-          placeholder="Write a To Do and Press Enter"
-        />
-      </form>
-      <ul id="todo-list"></ul>
+    <form id="todo-form">
+      <input
+        required
+        class="input_box"
+        type="text"
+        placeholder="Write a To Do and Press Enter"
+        maxlength="30"
+      />
+    </form>
+    <ul id="todo-list"></ul>
 
-      <div id="quote">
-        <span></span>
-        <span></span>
-      </div>
-
-      <div id="weather">
+    <div id="quote">
       <span></span>
       <span></span>
     </div>
 
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
