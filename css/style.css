@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
-
 body {
-    font-family: "Roboto Mono", sans-serif;
-
     height: 100vh;
     width: 100vw;
     
@@ -55,6 +51,8 @@ body {
     border-radius: 10px;
 }
 
+
+
 #quote {
     margin: 5px;
     
@@ -64,11 +62,90 @@ body {
     align-items: center;
 
     position: absolute;
-    bottom: 10px;    
+    bottom: 10px;
+    
+    font-weight: 400;
 }
-#quote span:last-child {
+#quote p:last-child {
     margin: 10px;
 }
+
+
+
+@keyframes quoteAnimation {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: none;
+    }
+}
+#quote:hover {
+    animation: quoteAnimation 1s ease-in-out infinite;
+}
+
+#weather-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+
+@keyframes weatherAnimation {
+    0% {
+        color: white;
+        transform: none;
+    }
+    50% {
+        color: tomato;
+        transform: scale(1.2);
+    }
+    100% {
+        color: white;
+        transform: none;
+    }
+}
+#weather-icon:hover {
+    animation: weatherAnimation 1s ease-in-out infinite;
+}
+
+#map-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1px;
+    position: absolute;
+    right: 129px;
+    top: 32px;
+}
+
+@keyframes mapAnimation {
+    0% {
+        color: green;
+        transform: none;
+    }
+    50% {
+        color: green;
+        transform: rotateX(360deg);
+    }
+    100% {
+        color: green;
+        transform: none;
+    }
+}
+#map-icon:hover {
+    animation: mapAnimation 1s ease-in-out infinite;
+}
+
 
 #weather {
     display: flex;
@@ -79,7 +156,15 @@ body {
     position: absolute;
     right: 50px;
     top: 10px;
+
+    font-weight: 500;
 }
+
+#weather span:last-child {
+    margin-top: 5px;
+}
+
+
 
 .backgroundSet {
     height: 100vh;
@@ -87,7 +172,9 @@ body {
     position: absolute;
     z-index: -1;
     background-size: cover;
-  }
+}
+
+
 
 #todo-form {
     margin: 20px;
@@ -99,6 +186,17 @@ body {
     justify-content: flex-start;
 
     font-size: 20px;
+    
+    background-color: rgba(128, 128, 128, 0.4);
+    border: none;
+    border-radius: 5px;
+    
+  }
+  #todo-list > li {
+    margin: 3px;
+  }
+  #todo-list > button {
+    margin: 5px;
   }
 
 .input_box {
