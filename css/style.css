@@ -116,36 +116,6 @@ body {
     animation: weatherAnimation 1s ease-in-out infinite;
 }
 
-#map-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 1px;
-    position: absolute;
-    right: 129px;
-    top: 32px;
-}
-
-@keyframes mapAnimation {
-    0% {
-        color: green;
-        transform: none;
-    }
-    50% {
-        color: green;
-        transform: rotateX(360deg);
-    }
-    100% {
-        color: green;
-        transform: none;
-    }
-}
-#map-icon:hover {
-    animation: mapAnimation 1s ease-in-out infinite;
-}
-
 
 #weather {
     display: flex;
